@@ -1,0 +1,16 @@
+/* Author: Niki Nielsen.
+Date: 2/12/2024
+File Name: styles.
+bioSite
+*/
+
+/*css reset*/
+body,
+header,
+nav,
+main,
+footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
