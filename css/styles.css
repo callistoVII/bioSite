@@ -9,8 +9,103 @@ body,
 header,
 nav,
 main,
-footer {
+footer,
+ul {
   margin: 0;
   padding: 0;
   border: 0;
+}
+
+/* style rules for mobile viewport */
+
+/* style rules for body and images */
+body {
+  background-color: rgb(255, 242, 222);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* style rules for header area */
+header h1 {
+  font-family: "Phudu", sans-serif;
+  color: rgb(14, 22, 40);
+  text-align: center;
+  font-size: 3.5em;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+/* style rules for navigation area */
+
+nav {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  background-color: rgb(255, 242, 222);
+}
+
+nav li {
+  font-family: "Cutive Mono", monospace;
+  text-align: center;
+  font-size: 1.1em;
+  border-top: 1px solid rgb(14, 22, 40);
+}
+
+nav li:first-child {
+  border-top: none;
+}
+
+nav li a {
+  display: block;
+  color: rgb(55, 29, 40);
+  padding: 1.75 em 3em;
+  text-decoration: none;
+}
+
+/* change link color on hover ?
+li a:hover {
+  background-color: rgb(177, 80, 80);
+  color: rgb(255, 242, 222);
+}
+*/
+
+/* add active class to show user which page they are on */
+.active {
+  background-color: rgb(116, 54, 54);
+  color: rgb(255, 242, 222);
+}
+
+/* style rules for main content area */
+main,
+h2 {
+  font-family: "Cormorant", serif;
+  text-emphasis: none;
+  text-align: center;
+  color: rgb(55, 29, 40);
+}
+
+a {
+  text-decoration: none;
+}
+/* style rules for footer area */
+
+footer p {
+  font-size: 0.75em;
+  text-align: center;
+  color: rgb(116, 54, 54);
+  padding: 0 1em;
+}
+
+footer p a {
+  color: rgb(49, 24, 24);
+  text-decoration: none;
 }
