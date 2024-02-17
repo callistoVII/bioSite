@@ -71,18 +71,18 @@ nav li a {
   text-decoration: none;
 }
 
-/* change link color on hover ?
+/* change link color on hover */
 li a:hover {
   background-color: rgb(177, 80, 80);
   color: rgb(255, 242, 222);
 }
-*/
 
-/* add active class to show user which page they are on */
+/* add active class to show user which page they are on
 .active {
   background-color: rgb(116, 54, 54);
   color: rgb(255, 242, 222);
 }
+*/
 
 /* style rules for main content area */
 main,
@@ -103,9 +103,4 @@ footer p {
   text-align: center;
   color: rgb(116, 54, 54);
   padding: 0 1em;
-}
-
-footer p a {
-  color: rgb(49, 24, 24);
-  text-decoration: none;
 }
