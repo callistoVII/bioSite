@@ -1,4 +1,5 @@
-/* Author: Niki Nielsen.
+/*
+Author: Niki Nielsen.
 Date: 2/12/2024
 File Name: styles.
 bioSite
@@ -10,15 +11,17 @@ header,
 nav,
 main,
 footer,
+h1,
+h3,
+div,
+img,
 ul {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* style rules for mobile viewport */
-
-/* style rules for body and images */
+/* Style Rules for body and images */
 body {
   background-color: rgb(255, 242, 222);
 }
@@ -28,79 +31,180 @@ img {
   display: block;
 }
 
-/* style rules for header area */
-header h1 {
-  font-family: "Phudu", sans-serif;
-  color: rgb(14, 22, 40);
+/* Style Rules for Mobile Viewport */
+
+/* Show Mobile class, hide tablet-desktop class */
+.mobile {
+  display: block;
+}
+
+.tablet-desktop {
+  display: block;
+}
+
+/* Style Rules for Header Area */
+.mobile h1 {
+  padding: 2%;
   text-align: center;
-  font-size: 3.5em;
+  font-family: "Phudu", sans-serif;
+  font-style: normal;
+  text-decoration: none;
 }
 
-header img {
-  margin: 0 auto;
+.mobile h3 {
+  padding: 2%;
+  text-align: center;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  text-decoration: none;
 }
 
-/* style rules for navigation area */
-
+/* Style Rules for navigation area */
 nav {
-  padding: 1%;
-  margin-bottom: 1%;
+  background-color: rgb(255, 242, 222);
 }
 
 nav ul {
   list-style-type: none;
+  margin: 0;
   text-align: center;
-  background-color: rgb(255, 242, 222);
 }
 
 nav li {
-  font-family: "Cutive Mono", monospace;
-  text-align: center;
-  font-size: 1.1em;
+  display: block;
   border-top: 1px solid rgb(14, 22, 40);
-}
-
-nav li:first-child {
-  border-top: none;
+  border-width: 0.5px;
+  font-size: 1.2em;
+  font-family: "Cutive Mono", monospace;
+  font-weight: bold;
 }
 
 nav li a {
   display: block;
   color: rgb(55, 29, 40);
-  padding: 0.35%;
+  padding: 0.5em 1em;
   text-decoration: none;
 }
 
 /* change link color on hover */
-li a:hover {
+nav li a:hover {
   background-color: rgb(177, 80, 80);
   color: rgb(255, 242, 222);
 }
 
-/* add active class to show user which page they are on
-.active {
-  background-color: rgb(116, 54, 54);
-  color: rgb(255, 242, 222);
-}
-*/
-
-/* style rules for main content area */
-main,
-h2 {
+/* Style rules for Main content area */
+main {
+  padding: 2%;
   font-family: "Cormorant", serif;
-  text-emphasis: none;
-  text-align: center;
+  font-style: normal;
+  text-decoration: none;
+}
+
+main p {
+  font-size: 1.25em;
+}
+
+main h3 {
+  font-size: 1.75em;
+  font-family: "Phudu", sans-serif;
+  font-style: normal;
   color: rgb(55, 29, 40);
 }
 
-a {
-  text-decoration: none;
+main ul {
+  list-style-type: square;
 }
-/* style rules for footer area */
 
-footer p {
-  font-size: 0.75em;
+.round {
+  border-radius: 10px;
+}
+
+/* style rules for footer area */
+footer {
   text-align: center;
-  color: rgb(116, 54, 54);
-  padding: 0 1em;
+  font-size: 0.75em;
+  border-top: 1px dotted rgb(39, 16, 16);
+  color: rgb(55, 29, 40);
+  padding: 0.5% 0%;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 630px), print {
+  /*Tablet Viewport: Show Tablet-desktop class, hide mobile class */
+  .tablet-desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  /* Tablet Viewport: Style rules for Navigation */
+  nav li {
+    border-top: none;
+    display: inline-block;
+    font-size: 1.15em;
+  }
+
+  nav li:last-child {
+    border-right: none;
+  }
+
+  nav li a {
+    padding: 0.1em 0.75em;
+  }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1020px), print {
+  header {
+    width: 25%;
+    float: left;
+    padding-bottom: 0;
+  }
+
+  /* Desktop Viewport: Style Rules for Nav area */
+  nav {
+    float: right;
+    width: 70%;
+    margin: 4em 1em 0 0;
+  }
+
+  nav ul {
+    text-align: right;
+  }
+
+  nav li {
+    border: none;
+  }
+
+  nav li a {
+    padding: 0.5em 1em;
+  }
+
+  nav li a:hover {
+    color: rgb(177, 80, 80);
+    background-color: rgb(255, 242, 222);
+  }
+
+  /* Desktop Viewport: Style rules for main content */
+  main {
+    clear: left;
+  }
+}
+
+/*Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+  #wrapper {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+/* Media Query for Print */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
 }
