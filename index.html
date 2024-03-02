@@ -13,28 +13,37 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Cutive+Mono&family=Phudu:wght@300..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png" />
   </head>
 
   <body>
-    <div id="wrapper">
+    <div id="container" class="container">
+      <!-- Header Are for Website Name or Logo-->
       <header>
-        <div class="tablet-desktop">
-          <a href="index.html"
-            ><img
-              src="images/dogwood-flowers.jpg"
-              alt="dogwood blossoms in full bloom"
-          /></a>
-        </div>
-
-        <div class="mobile">
-          <h1>The Little Medic</h1>
-        </div>
+        <a href="index.html" id="logo">
+          <img
+            src="images/dogwood-logo.png"
+            alt="dogwood blossoms in full bloom"
+          />
+        </a>
       </header>
 
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
+          <li><a href="about.html">The Who</a></li>
           <li><a href="profession.html">The Job</a></li>
           <li><a href="hobbies.html">The Hobbies</a></li>
           <li><a href="pets.html">The Furbabies</a></li>
@@ -42,49 +51,45 @@
         </ul>
       </nav>
 
+      <!-- Hero image- to be a thin, border-like element.
+      <div id="hero" class="tablet-desktop">
+        <img src="images/dogwood-hero.jpg" alt="out of focus florals" />
+      </div>
+      -->
+
+      <!--use the Main Area to add the main content to the webpage-->
       <main>
-        <div>
-          <h3>
-            This website is meant to be a fun little biographical study site,
-            dedicated to a very stellar human being.
-          </h3>
+        <div class="mobile" id="mobile">
+          <h3>Welcome to The Little Medic.</h3>
 
-          <div id="welcome">
-            <h3>Welcome to the Home of The Little Medic.</h3>
-            <p>
-              Kara Kitchen is a full-time Paramedic, and a recent transplant to
-              Pennsylvania by way of Florida. She is an auto-didact who taught
-              herself how to operate a sewing machine and has since created many
-              period accurate articles of clothing more at home in the Civil war
-              or Renaissance era than in modern times, and has also sold many
-              custom pieces as well. The very definition of "where there's a
-              will, there's a way," she has also figured out how to make actual
-              pleated kilts. All of which she sales via her e-commerce
-              storefront housed with Etsy.
-            </p>
+          <p>
+            This is a website dedicated to the life, times, and hobbies of Kara
+            Kitchen.
+          </p>
 
-            <p>
-              If that wasn't bonkers enough, Kara also knows her way around a
-              kitchen and does amazing things with carbs and fruit filling. Her
-              artisanal pies are works of art, in and of themselves.
-            </p>
+          <img
+            src="images/hands-and-cocoa.png"
+            alt="hands holding a cup of fancy hot cocoa"
+          />
+        </div>
 
-            <p>
-              When she is not saving lives, or making the rest of us look bad,
-              she can be found snuggled up with her two pups, Riker and Lily,
-              reading a good book, or off on site-seeing adventures with her
-              husband, Tom.
-            </p>
-          </div>
+        <div class="tablet-desktop" id="tablet-desktop">
+          <h1>Welcome to The Little Medic.</h1>
 
-          <div id="portrait">
-            <img
-              src="images/kara-med-gear-sm.jpg"
-              alt="kara in front of electric fleet vehicle."
-              class="round"
-            />
-            <h3>Snap shots at work.</h3>
-          </div>
+          <p>
+            This is a website dedicated to the life, times, and hobbies of Kara
+            Kitchen.
+          </p>
+
+          <img
+            src="images/sweater-cocoa.jpg"
+            alt="coffee house shot of hands holding a mug"
+            class="round"
+          />
+          <p>
+            Kara is known to enjoy a cup of delicious hot chocolate from time to
+            time. When one lives near Hershey, PA, it's just what you do.
+          </p>
         </div>
       </main>
     </div>

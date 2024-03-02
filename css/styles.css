@@ -15,15 +15,21 @@ h1,
 h3,
 div,
 img,
-ul {
+ul,
+li,
+figure,
+figcaption {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* Style Rules for body and images */
+/* Style Rules for Body and Images */
 body {
-  background-color: rgb(255, 242, 222);
+  padding: 0;
+  margin: 0;
+  background-color: rgb(236, 195, 167);
+  font-family: "Cormorant", serif;
 }
 
 img {
@@ -32,83 +38,105 @@ img {
 }
 
 /* Style Rules for Mobile Viewport */
-
 /* Show Mobile class, hide tablet-desktop class */
 .mobile {
   display: block;
 }
 
 .tablet-desktop {
-  display: block;
+  display: none;
 }
 
-/* Style Rules for Header Area */
+/* Style Rules for Header Area - Mobile */
 .mobile h1 {
-  padding: 2%;
-  text-align: center;
-  font-family: "Phudu", sans-serif;
-  font-style: normal;
-  text-decoration: none;
+  margin-right: 1em;
+  font-family: "Cormorant", serif;
+  font-size: 2em;
+  line-height: 1em;
+  color: rgb(39, 16, 16);
 }
 
 .mobile h3 {
-  padding: 2%;
-  text-align: center;
-  font-family: "Cormorant", serif;
-  font-style: normal;
-  text-decoration: none;
+  font-family: "Cormorant", cursive;
+  font-size: 1.5em;
+  line-height: 1em;
+  color: rgb(51, 24, 18);
 }
 
-/* Style Rules for navigation area */
+header img {
+  width: auto;
+  height: auto;
+}
+/* Style Rules for Navigation Area - Mobile */
+
+header {
+  padding-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(236, 195, 167);
+  height: 142px;
+}
+
 nav {
-  background-color: rgb(255, 242, 222);
+  padding: 1%;
+  background-color: rgb(236, 195, 167);
+  height: 80px;
 }
 
 nav ul {
   list-style-type: none;
-  margin: 0;
   text-align: center;
 }
 
 nav li {
-  display: block;
-  border-top: 1px solid rgb(14, 22, 40);
-  border-width: 0.5px;
-  font-size: 1.2em;
+  margin: 0 1em;
+  font-size: 1.25em;
   font-family: "Cutive Mono", monospace;
+  border-top: 0.5px dotted rgb(100, 65, 51);
 }
 
 nav li a {
   display: block;
-  color: rgb(55, 29, 40);
+  color: rgb(51, 24, 18);
   padding: 0.5em 1em;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* change link color on hover */
+/* change link color and font weight on hover */
 nav li a:hover {
   background-color: rgb(177, 80, 80);
   color: rgb(255, 242, 222);
+  font-weight: normal;
 }
 
 /* Style rules for Main content area */
 main {
   padding: 2%;
+  background-color: rgb(255, 242, 222);
   font-family: "Cormorant", serif;
-  font-style: normal;
-  text-decoration: none;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: rgb(39, 16, 16);
 }
 
-main p {
-  font-size: 1.25em;
+main h1 {
+  font-family: "Phudu", sans-serif;
+  font-size: 2em;
+  line-height: 1em;
+  color: rgb(39, 16, 16);
 }
 
 main h3 {
-  text-align: center;
-  font-size: 1.75em;
   font-family: "Phudu", sans-serif;
-  font-style: normal;
+  font-size: 1.75em;
+  line-height: 1em;
   color: rgb(55, 29, 40);
+}
+
+main p {
+  margin-bottom: 1em;
 }
 
 main ul {
@@ -116,15 +144,33 @@ main ul {
 }
 
 .round {
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+figure {
+  border-bottom: 2px dotted rgb(255, 187, 85);
+  border-radius: 15px;
+  max-width: 400px;
+  margin: 2% auto;
+}
+
+figcaption {
+  padding: 2%;
+  font-family: "Cutive Mono", sans-serif;
+  font-size: 1em;
+  line-height: 1.15em;
+  text-align: center;
+  border-top: 2px solid rgb(255, 187, 85);
+  border-radius: 15px;
 }
 
 /* style rules for footer area */
 footer {
   text-align: center;
   font-size: 0.75em;
-  border-top: 1px dotted rgb(39, 16, 16);
-  color: rgb(55, 29, 40);
+  border-top: 2px dotted rgb(39, 16, 16);
+  background-color: rgb(236, 195, 167);
+  color: rgb(39, 16, 16);
   padding: 0.5% 0%;
 }
 
@@ -140,18 +186,38 @@ footer {
   }
 
   /* Tablet Viewport: Style rules for Navigation */
+
+  nav {
+    padding: 2;
+  }
+
+  nav ul {
+    text-align: center;
+  }
+
   nav li {
     border-top: none;
-    display: inline-block;
-    font-size: 1.15em;
+    display: inline-flex;
+    background-color: rgb(236, 195, 167);
   }
 
   nav li:last-child {
-    border-right: none;
+    border-top: none;
   }
 
   nav li a {
-    padding: 0.1em 0.75em;
+    padding: 0.25em 0.5em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+  }
+
+  /* Tablet Viewport: Style Rules for Main Content Area */
+  main ul {
+    margin: 0 0 2% 8%;
   }
 }
 
@@ -163,6 +229,29 @@ footer {
     padding-bottom: 0;
   }
 
+  /* Desktop Viewport: Style rules for main content */
+  main {
+    clear: right;
+  }
+
+  main h3 {
+    font-size: 1.75em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+  }
+
+  /*
+
+  #container {
+    width: 1720px;
+    margin: 0 auto;
+  }
+  */
+
   /* Desktop Viewport: Style Rules for Nav area */
   nav {
     float: right;
@@ -171,7 +260,7 @@ footer {
   }
 
   nav ul {
-    text-align: right;
+    text-align: center;
   }
 
   nav li {
@@ -183,19 +272,14 @@ footer {
   }
 
   nav li a:hover {
-    color: rgb(177, 80, 80);
-    background-color: rgb(255, 242, 222);
-  }
-
-  /* Desktop Viewport: Style rules for main content */
-  main {
-    clear: left;
+    color: rgb(255, 242, 222);
+    background-color: rgb(177, 80, 80);
   }
 }
 
 /*Media Query for Large Desktop Viewports */
 @media screen and (min-width: 1921px) {
-  #wrapper {
+  #container {
     width: 1920px;
     margin: 0 auto;
   }
