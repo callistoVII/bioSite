@@ -89,7 +89,7 @@ nav li a {
 
 /* Link Action: Change Box Color and Font Weight on Hover */
 nav li a:hover {
-  background-color: rgb(177, 80, 80);
+  background-color: rgb(54, 3, 3);
   color: rgb(255, 242, 222);
   font-weight: normal;
   font-style: italic;
@@ -151,17 +151,48 @@ main h3 {
   border-radius: 15px;
 }
 
+/*
+.contact {
+  align-content: center;
+  font-size: 1em;
+  margin: 0 6%;
+}
+*/
+
+#info {
+  margin: 0 12%;
+  align-items: center;
+}
+
+#info img {
+  max-width: 100%;
+  display: block;
+  align-content: center;
+}
+
+aside {
+  font-family: "Phudu", sans-serif;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+aside p {
+  font-family: "Cutive Mono", serif;
+  font-size: 1em;
+  text-align: center;
+}
+
 figure {
   border-bottom: 2px dotted rgb(255, 187, 85);
   border-radius: 15px;
-  max-width: 400px;
+  max-width: 425px;
   margin: 2% auto;
-  align-items: flex-start;
+  align-items: center;
 }
 
 figcaption {
   padding: 2%;
-  font-family: "Cutive Mono", sans-serif;
+  font-family: "Cutive Mono", serif;
   font-size: 1em;
   line-height: 1.15em;
   text-align: center;
@@ -273,7 +304,7 @@ nav li a {
 
   nav li a:hover {
     color: rgb(255, 242, 222);
-    background-color: rgb(177, 80, 80);
+    background-color: rgb(54, 3, 3);
   }
 }
 
