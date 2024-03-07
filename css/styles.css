@@ -65,6 +65,7 @@ img {
 /* Style Rules for Navigation Area. */
 nav {
   background-color: rgb(236, 195, 167);
+  width: 100%;
 }
 
 nav ul {
@@ -80,19 +81,24 @@ nav li {
 }
 
 nav li a {
-  display: block;
+  display: flex;
   color: rgb(51, 24, 18);
   padding: 1em 1em;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Link Action: Change Box Color and Font Weight on Hover */
+/* Link Action: Change Box Color and Font Weight on Hover and on Active */
 nav li a:hover {
   background-color: rgb(54, 3, 3);
   color: rgb(255, 242, 222);
   font-weight: normal;
   font-style: italic;
+}
+
+nav li a.active {
+  background-color: rgb(255, 187, 85);
+  color: rgb(39, 16, 16);
 }
 
 /* Style Rules for Main Content Area */
@@ -147,10 +153,25 @@ main h3 {
   color: rgb(55, 29, 40);
 }
 
+#kitchenpies,
+#kitschnwitchco {
+  margin: 10% 10%;
+  display: block;
+  align-items: center;
+}
+
 .round {
   border-radius: 15px;
 }
 
+* {
+  text-decoration: none;
+}
+
+.external-link {
+  color: rgb(170, 68, 9);
+  font-weight: bold;
+}
 /*
 .contact {
   align-content: center;
