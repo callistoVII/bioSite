@@ -18,7 +18,8 @@ img,
 ul,
 li,
 figure,
-figcaption {
+figcaption,
+section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -160,6 +161,21 @@ main h3 {
   align-items: center;
 }
 
+#facts {
+  margin: 5% 5%;
+  padding: 5%;
+  display: block;
+  background-color: rgba(75, 63, 54, 0.315);
+  font-family: "Cutive Mono", serif;
+  align-content: justify;
+  color: #000;
+  border: 4px double rgb(255, 187, 85);
+}
+
+#hero-image {
+  margin: auto;
+}
+
 .round {
   border-radius: 15px;
 }
@@ -169,16 +185,9 @@ main h3 {
 }
 
 .external-link {
-  color: rgb(170, 68, 9);
+  color: rgb(184, 0, 61);
   font-weight: bold;
 }
-/*
-.contact {
-  align-content: center;
-  font-size: 1em;
-  margin: 0 6%;
-}
-*/
 
 #info {
   margin: 0 12%;
@@ -189,18 +198,6 @@ main h3 {
   max-width: 100%;
   display: block;
   align-content: center;
-}
-
-aside {
-  font-family: "Phudu", sans-serif;
-  text-align: center;
-  font-size: 1.25em;
-}
-
-aside p {
-  font-family: "Cutive Mono", serif;
-  font-size: 1em;
-  text-align: center;
 }
 
 figure {
@@ -217,7 +214,7 @@ figcaption {
   font-size: 1em;
   line-height: 1.15em;
   text-align: center;
-  border-top: 2px solid rgb(255, 187, 85);
+  border-top: 3px solid rgb(255, 187, 85);
   border-radius: 15px;
 }
 
@@ -272,10 +269,28 @@ nav li a {
   .mobile {
     display: none;
   }
+
+  .header_img_index {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li a {
+    /* Reset Nav Width */
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .header_img {
+    display: none;
+  }
+
+  .header_img_index {
     display: none;
   }
 }
