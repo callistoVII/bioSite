@@ -12,7 +12,9 @@ nav,
 main,
 footer,
 h1,
+h2,
 h3,
+h4,
 div,
 img,
 ul,
@@ -104,7 +106,6 @@ nav li a.active {
 
 /* Style Rules for Main Content Area */
 header {
-  padding: 0 auto;
   display: inline-flex;
   max-width: fit-content;
 }
@@ -162,18 +163,34 @@ main h3 {
 }
 
 #facts {
-  margin: 5% 5%;
+  margin: 5%;
   padding: 5%;
   display: block;
   background-color: rgba(75, 63, 54, 0.315);
   font-family: "Cutive Mono", serif;
-  align-content: justify;
   color: #000;
   border: 4px double rgb(255, 187, 85);
 }
 
-#hero-image {
-  margin: auto;
+.piebk {
+  display: block;
+  margin: 5%;
+  padding: 3%;
+  background-color: rgba(75, 63, 54, 0.315);
+  font-family: "Cutive Mono", serif;
+  color: #000;
+  border: 2px solid rgb(255, 187, 85);
+}
+
+.request {
+  margin: 2%;
+  padding: 2%;
+  align-items: center;
+}
+
+.pies {
+  float: right;
+  border-radius: 20px;
 }
 
 .round {
@@ -201,14 +218,16 @@ main h3 {
 }
 
 figure {
+  /* Style of Border is Partial */
   border-bottom: 2px dotted rgb(255, 187, 85);
   border-radius: 15px;
   max-width: 425px;
-  margin: 2% auto;
+  margin: 10% 2%;
   align-items: center;
 }
 
 figcaption {
+  /* Style of Border is Partial */
   padding: 2%;
   font-family: "Cutive Mono", serif;
   font-size: 1em;
@@ -221,7 +240,7 @@ figcaption {
 /* Style Rules for Footer Area */
 footer {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.1em;
   border-top: 2px dotted rgb(39, 16, 16);
   background-color: rgb(236, 195, 167);
   color: rgb(39, 16, 16);
@@ -252,21 +271,18 @@ nav li a {
   padding: 0.25em 0.5em;
 }
 
-.grid {
-  display: grid;
-  align-content: flex-start;
-  grid-template-columns: auto auto;
-  grid-gap: 30px;
-}
-
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 620px), print {
+@media screen and (max-width: 620px), print {
   /* Tablet Viewport: Show Tablet-Desktop class, Hide Mobile class.*/
   .tablet-desktop {
     display: block;
   }
 
   .mobile {
+    display: none;
+  }
+
+  .header_img {
     display: none;
   }
 
@@ -283,22 +299,16 @@ nav li a {
     /* Reset Nav Width */
     width: auto;
   }
-}
 
-@media screen and (max-width: 600px) {
-  .header_img {
-    display: none;
-  }
-
-  .header_img_index {
-    display: none;
+  .grid {
+    display: grid;
+    grid-template-columns: auto;
   }
 }
 
 /* Media Query for Desktop Viewport */
 @media screen and (min-width: 1020px), print {
   header {
-    width: 25%;
     float: left;
     padding-bottom: 0;
   }
@@ -312,11 +322,6 @@ nav li a {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 30px;
-  }
-
-  #container {
-    width: 1980px;
-    margin: 0 auto;
   }
 
   /* Desktop Viewport: Style Rules for Nav area */
@@ -346,10 +351,19 @@ nav li a {
 
 /*Media Query for Large Desktop Viewports */
 @media screen and (min-width: 1921px) {
+  body {
+    background: linear-gradient(#fff2de, #fab086);
+  }
+
   #container {
-    display: inline-block;
     width: 1920px;
     margin: 0 auto;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
   }
 }
 
