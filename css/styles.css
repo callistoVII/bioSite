@@ -81,12 +81,18 @@ nav li a {
   font-weight: bold;
 }
 
-/* Link Action: Change Box Color and Font Weight on Hover */
+/* Pseudo-class Link Action: Change Box Color and Font Weight on Hover */
 nav li a:hover {
   background-color: rgb(54, 3, 3);
   color: rgb(255, 242, 222);
   font-weight: normal;
   font-style: italic;
+}
+
+/* Psuedo-class Link Action: Change Font and Weight Color After Visited. */
+nav li a:visited {
+  color: rgb(163, 0, 0);
+  font-weight: normal;
 }
 
 /* Style Rule - Show Mobile Class, Hide Tablet-Desktop Class */
@@ -287,6 +293,12 @@ figcaption {
   border-top: 3px solid rgb(255, 187, 85);
   border-bottom: 2px dotted rgb(240, 159, 39);
   border-radius: 15px;
+}
+
+figcaption:nth-last-of-type(odd) {
+  /* Attempted to use Pseudo class to
+  alternate BG colors of figures, managed to get all rather than odd */
+  background-color: rgba(255, 188, 150, 0.205);
 }
 
 /* Style Rules for Footer Area */
