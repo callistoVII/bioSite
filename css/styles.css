@@ -241,14 +241,14 @@ label {
 }
 
 #form img {
-  align-items: right;
+  padding: 3%;
 }
 
 #info {
   margin: 2%;
   padding: 5%;
   background-color: rgba(233, 157, 134, 0.281);
-  align-items: justify;
+  text-align: justify;
 }
 
 .row {
@@ -271,7 +271,6 @@ label {
 /* Style Rules for Figure Elements */
 figure {
   /* Style of Border is Partial */
-  border-bottom: 2px dotted rgb(255, 187, 85);
   border-radius: 15px;
   max-width: 425px;
   margin: 10% 2%;
@@ -280,12 +279,13 @@ figure {
 
 figcaption {
   /* Style of Border is Partial */
-  padding: 2%;
+  padding: 6%;
   font-family: "Cutive Mono", serif;
   font-size: 1em;
-  line-height: 1.15em;
+  line-height: 1.75em;
   text-align: center;
   border-top: 3px solid rgb(255, 187, 85);
+  border-bottom: 2px dotted rgb(240, 159, 39);
   border-radius: 15px;
 }
 
