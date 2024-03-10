@@ -14,9 +14,6 @@ footer,
 h1,
 h2,
 h3,
-h4,
-div,
-img,
 ul,
 li,
 figure,
@@ -30,7 +27,7 @@ section {
 /* Style Rules for Body and Images. */
 body {
   background-color: rgb(236, 195, 167);
-  font-family: "Cormorant", serif;
+  font-family: "Cutive Mono", serif;
 }
 
 img {
@@ -38,37 +35,25 @@ img {
   display: block;
 }
 
-/* Mobile - Style Rules for Viewport. */
-/* Mobile - Style Rules to Show Mobile Class, Hide Tablet-Desktop Class */
-.mobile {
-  display: block;
-}
-
-.tablet-desktop {
-  display: none;
-}
-
-/* Mobile - Style Rules for Header Area. */
+/* Mobile Style Rules */
 .mobile h1 {
   padding: 2%;
-  text-decoration: none;
   text-align: center;
-  font-family: "Cormorant", serif;
-  font-size: 1.6em;
-  color: rgb(39, 16, 16);
+  font-family: "Phudu", sans-serif;
+  text-decoration: none;
 }
 
 .mobile h3 {
-  font-family: "Phudu", sans-serif;
-  font-size: 1.5em;
-  color: rgb(51, 24, 18);
+  padding: 2%;
   text-align: center;
+  font-family: "Phudu", sans-serif;
+  font-style: normal;
+  text-decoration: none;
 }
 
 /* Style Rules for Navigation Area. */
 nav {
   background-color: rgb(236, 195, 167);
-  width: 100%;
 }
 
 nav ul {
@@ -77,21 +62,26 @@ nav ul {
 }
 
 nav li {
-  margin: 20px;
-  font-size: 1.25em;
+  margin: 25px;
+  font-size: 1.5em;
   font-family: "Cutive Mono", monospace, serif;
+  font-weight: normal;
+  display: inline-block;
   border-top: 1px dotted rgb(100, 65, 51);
 }
 
+nav li:first-child {
+  border-top: none;
+}
+
 nav li a {
-  display: flex;
   color: rgb(51, 24, 18);
   padding: 1em 1em;
   text-decoration: none;
   font-weight: bold;
 }
 
-/* Link Action: Change Box Color and Font Weight on Hover and on Active */
+/* Link Action: Change Box Color and Font Weight on Hover */
 nav li a:hover {
   background-color: rgb(54, 3, 3);
   color: rgb(255, 242, 222);
@@ -99,38 +89,32 @@ nav li a:hover {
   font-style: italic;
 }
 
-nav li a.active {
-  background-color: rgb(255, 187, 85);
-  color: rgb(39, 16, 16);
+/* Style Rule - Show Mobile Class, Hide Tablet-Desktop Class */
+.mobile {
+  display: block;
+}
+
+.tablet-desktop {
+  display: none;
 }
 
 /* Style Rules for Main Content Area */
-header {
-  display: inline-flex;
-  max-width: fit-content;
-}
-
 .header_img {
   width: auto;
   height: auto;
 }
 
 main {
-  padding: 1%;
+  padding: 3%;
   background-color: rgb(255, 242, 222);
-  font-family: "Cormorant", serif;
   font-size: 1.25em;
   line-height: 1.5em;
-  color: rgb(39, 16, 16);
+  color: rgb(20, 1, 1);
   border-top: 2px dotted rgb(51, 24, 18);
 }
 
 main p {
   font-size: 1.25em;
-}
-
-main ul {
-  list-style-type: square;
 }
 
 main h1 {
@@ -150,36 +134,42 @@ main h2 {
 
 main h3 {
   font-family: "Phudu", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.25em;
+  line-height: 1em;
   text-align: center;
   color: rgb(55, 29, 40);
 }
 
-#kitchenpies,
-#kitschnwitchco {
-  margin: 10% 10%;
-  display: block;
-  align-items: center;
+main ul {
+  list-style-type: none;
 }
 
-#facts {
-  margin: 5%;
-  padding: 5%;
-  display: block;
-  background-color: rgba(75, 63, 54, 0.315);
-  font-family: "Cutive Mono", serif;
-  color: #000;
-  border: 4px double rgb(255, 187, 85);
+.fastfacts {
+  text-align: left;
+  margin: 4%;
+}
+.mobile ul {
+  list-style-type: disc;
+}
+
+.external-link {
+  color: rgb(121, 12, 12);
+  font-weight: bold;
+  text-shadow: 5px 5px 8px rgb(255, 213, 150);
+}
+
+.round {
+  border-radius: 15px;
 }
 
 .piebk {
   display: block;
   margin: 5%;
   padding: 3%;
-  background-color: rgba(75, 63, 54, 0.315);
+  background-color: rgba(233, 157, 134, 0.281);
   font-family: "Cutive Mono", serif;
   color: #000;
-  border: 2px solid rgb(255, 187, 85);
+  border: 4px double rgb(255, 187, 85);
 }
 
 .request {
@@ -193,30 +183,92 @@ main h3 {
   border-radius: 20px;
 }
 
-.round {
-  border-radius: 15px;
+.frame {
+  display: block;
+  background-color: rgb(20, 1, 1);
+  padding: 40px;
+  margin: 10%;
+  align-content: center;
+  border: 1px solid rgb(255, 187, 85);
 }
 
-* {
-  text-decoration: none;
-}
-
-.external-link {
-  color: rgb(184, 0, 61);
-  font-weight: bold;
-}
-
-#info {
-  margin: 0 12%;
+#kitchenpies,
+#kitschnwitchco {
+  margin: 10% 10%;
+  display: block;
   align-items: center;
 }
 
-#info img {
-  max-width: 100%;
+#facts {
+  margin: 4%;
+  padding: 5%;
   display: block;
-  align-content: center;
+  background-color: rgba(233, 157, 134, 0.281);
+  border: 4px double rgb(255, 187, 85);
 }
 
+#facts p {
+  padding: 2%;
+  font-family: "Cutive Mono", serif;
+  font-size: 1.1em;
+  color: #000;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Style Rules for Form Elements */
+fieldset,
+input,
+select {
+  margin-bottom: 2%;
+}
+fieldset legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+label {
+  display: block;
+  padding-top: 1%;
+}
+
+#form {
+  margin-top: 1%;
+  padding: 4%;
+}
+
+#form img {
+  align-items: right;
+}
+
+#info {
+  margin: 2%;
+  padding: 5%;
+  background-color: rgba(233, 157, 134, 0.281);
+  align-items: justify;
+}
+
+.row {
+  padding: 2%;
+  margin: 2%;
+  display: block;
+  background-color: rgba(255, 213, 150, 0.3);
+}
+
+.row p {
+  font-size: 1.15em;
+  text-align: left;
+}
+
+.row img {
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Style Rules for Figure Elements */
 figure {
   /* Style of Border is Partial */
   border-bottom: 2px dotted rgb(255, 187, 85);
@@ -239,54 +291,33 @@ figcaption {
 
 /* Style Rules for Footer Area */
 footer {
+  font-family: "Cormorant", serif;
   text-align: center;
-  font-size: 1.1em;
-  border-top: 2px dotted rgb(39, 16, 16);
-  background-color: rgb(236, 195, 167);
+  font-size: 1.3em;
+  background-color: rgb(250, 176, 134);
   color: rgb(39, 16, 16);
   padding: 0.5% 0%;
 }
 
-/* Tablet Viewport: Style rules for Navigation */
+/* Media Query for Mobile Viewport to hide header img */
+@media screen and (max-width: 619px), print {
+  .header_img {
+    display: none;
+  }
 
-nav {
-  padding: 0.5%;
-}
-
-nav ul {
-  text-align: justify;
-}
-
-nav li {
-  border-top: none;
-  display: inline-block;
-  background-color: rgb(236, 195, 167);
-}
-
-nav li:last-child {
-  border-top: none;
-}
-
-nav li a {
-  padding: 0.25em 0.5em;
+  .header_img_index {
+    display: none;
+  }
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (max-width: 620px), print {
+@media screen and (min-width: 620px), print {
   /* Tablet Viewport: Show Tablet-Desktop class, Hide Mobile class.*/
   .tablet-desktop {
     display: block;
   }
 
   .mobile {
-    display: none;
-  }
-
-  .header_img {
-    display: none;
-  }
-
-  .header_img_index {
     display: none;
   }
 
